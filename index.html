@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Day After Ninety-nine</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/the-big-picture.css" rel="stylesheet">
+
+  <!-- 自訂字型: Noto Sans TC -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+  <!-- 打字動畫效果 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="jquery.typist/dist/jquery.typist.js"></script>
+
+  <script>
+  jQuery(function($) {
+    $('.typist')
+      .typist({ speed: 6 })
+      .typistPause(1000)
+      .typistAdd('末日戰爭結束了。')
+      .typistPause(2000)
+      .typistAdd('\n\n海洋受到汙染；\n大地變得荒蕪；\n人類不再誕生。')
+      .typistPause(2000)
+      .typistAdd('\n\n而死去的人類醒了過來\n——作為不死者繼續存在。');
+  });
+
+  /*jQuery(function($) {
+    $('.title')
+      .typistPause(12900)
+      .typistAdd('在那之後的九十九天')
+      .typistStop();
+  });*/
+  </script>
+
+  <style type="text/css">
+    body {
+      -moz-user-select : none;
+      -webkit-user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page Content -->
+  <section>
+    <div class="container">
+      <p class="transbox typist"></p>
+    </div>
+  </section>
+
+  <footer id="id_footer">
+    <div>
+      <button class="button">
+        <span><a href="home.html">在那之後的九十九天</a></span>
+      </button>
+    </div>
+  </footer> <!-- /id_footer -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 禁止右鍵 -->
+  <script type="text/javascript">
+    function iEsc(){ return false; }
+    function iRec(){ return true; }
+    function DisableKeys() {
+      if(event.ctrlKey || event.shiftKey || event.altKey) {
+        window.event.returnValue=false;
+        iEsc();
+      }
+    }
+    document.ondragstart=iEsc;
+    document.onkeydown=DisableKeys;
+    document.oncontextmenu=iEsc;
+    if (typeof document.onselectstart !="undefined")
+      document.onselectstart=iEsc;
+    else{
+      document.onmousedown=iEsc;
+      document.onmouseup=iRec;
+    }
+    function DisableRightClick(qsyzDOTnet){
+      if (window.Event){
+        if (qsyzDOTnet.which == 2 || qsyzDOTnet.which == 3)
+          iEsc();
+      }else{
+        if (event.button == 2 || event.button == 3){
+          event.cancelBubble = true
+          event.returnValue = false;
+          iEsc();
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

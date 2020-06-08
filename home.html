@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>在那之後的九十九天</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+
+  <!-- 自訂字型: Noto Sans TC -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand" href="https://www.plurk.com/Day_after99"  target="_blank">
+      <span class="d-block d-lg-none">在那之後的九十九天</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid mx-auto mb-2" src="img/profile.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: center;">
+      <ul class="navbar-nav">
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="#">佈告欄</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="about.html">導覽手冊</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="diagram.html">人偶設計圖</a>
+        </li>
+        <li class="nav-item  container1 topBotomBordersIn">
+          <a class="nav-link" href="characters.html">死者之國</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="history.html">死之日誌</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="awards.html">兌換所</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="contact.html">聯絡官方</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex">
+      <div class="col-lg-9 homefix" style="background-color: #738573; border-radius: 10px;">
+        <h6 style="margin-top: 30px;">距離企劃開始還有</h6>
+        <canvas id="output"></canvas>
+        <br/>
+        <div>
+          <h4 style="text-align: left;"><b>◆更新歷程◆</b></h4>
+          <p>2019.09.01 - 官網釋出。</p>
+          <br/>
+          <h4 style="text-align: left;"><b>◆公告◆</b></h4>
+          <p>預定報名時間：<b>2019/09/20 20:00</b> 至 <b>2019/09/28 23:59</b></p>
+          <p>企劃為期99天：<b>2019/10/01 00:01</b> 至 <b>2020/01/08 23:59</b></p>
+          <br/>
+          <p><b>⚠Attention⚠</b></p>
+          <p>本企劃因題材創作可能包含血腥、獵奇、殘酷及殭屍等情節，請無法接受的玩家自行迴避。</p>
+          <p>本企劃使用線上EXCEL角色卡，不適合只用手機的玩家。每個人僅能報名一個角色。</p>
+          <p>企劃因有數值計算及任務獎勵系統，故不開放場外玩家遊玩。​</p>
+          ​<p>本企劃使用大量(BZ)與(DICE)，僅適合噗浪平台玩家。</p>
+          <br/>
+          <p>本企劃發想及參考來源為《永い後日談のネクロニカ》及《神不在的星期天》。</p>
+          <p>《永い後日談のネクロニカ》相關專有名詞已取得非官方翻譯網站授權使用。</p>
+        </div>
+        
+
+      </div>
+
+      <div class="col-lg-3 homefloat">
+        <div class="container-picture box box2">
+          <div class="bubble">目前為企劃宣傳期間，還請有興趣的各位多多支持</div>
+          <div class="pointer"></div>
+          <img src="img/Sorority.png" style="width:100%; height:100%;">
+        </div>
+
+        <div class="box box1"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
+  <!-- 倒數計時器 -->
+  <script>
+    var ringer = {
+      countdown_to: "10/01/2019",
+      rings: {
+        '天': { 
+          s: 86400000, // mseconds in a day,
+          max: 30
+        },
+        '時': {
+          s: 3600000, // mseconds per hour,
+          max: 24
+        },
+        '分': {
+          s: 60000, // mseconds per minute
+          max: 60
+        }
+       },
+      r_count: 3,
+      r_spacing: 10, // px
+      r_size: 100, // px
+      r_thickness: 2, // px
+      update_interval: 11, // ms
+        
+        
+      init: function(){
+       
+        $r = ringer;
+        $r.cvs = document.createElement('canvas'); 
+        
+        $r.size = { 
+          w: ($r.r_size + $r.r_thickness) * $r.r_count + ($r.r_spacing*($r.r_count-1)), 
+          h: ($r.r_size + $r.r_thickness) 
+        };
+        
+         cvs = document.getElementById('output');
+
+        cvs.setAttribute('width',$r.size.w);           
+        cvs.setAttribute('height',$r.size.h);
+        $r.ctx = cvs.getContext('2d');
+        cvs = $(cvs);    
+        $r.ctx.textAlign = 'center';
+        $r.actual_size = $r.r_size + $r.r_thickness;
+        $r.countdown_to_time = new Date($r.countdown_to).getTime();
+        cvs.css({ width: $r.size.w+"px", height: $r.size.h+"px" });
+        $r.go();
+      },
+      ctx: null,
+      go: function(){
+        var idx=0;
+        
+        $r.time = (new Date().getTime()) - $r.countdown_to_time;
+        
+        for(var r_key in $r.rings) $r.unit(idx++,r_key,$r.rings[r_key]);      
+        
+        setTimeout($r.go,$r.update_interval);
+      },
+      unit: function(idx,label,ring) {
+        var x,y, value, ring_secs = ring.s;
+        value = parseFloat($r.time/ring_secs);
+        $r.time-=Math.round(parseInt(value)) * ring_secs;
+        value = Math.abs(value);
+        
+        x = ($r.r_size*.5 + $r.r_thickness*.5);
+        x +=+(idx*($r.r_size+$r.r_spacing+$r.r_thickness));
+        y = $r.r_size*.5;
+        y += $r.r_thickness*.5;
+    
+        // calculate arc end angle
+        var degrees = 360-(value / ring.max) * 360.0;
+        var endAngle = degrees * (Math.PI / 180);
+        
+        $r.ctx.save();
+    
+        $r.ctx.translate(x,y);
+        $r.ctx.clearRect($r.actual_size*-0.5,$r.actual_size*-0.5,$r.actual_size,$r.actual_size);
+    
+        // first circle
+        $r.ctx.strokeStyle = "rgba(128,128,128,0.2)";
+        $r.ctx.beginPath();
+        $r.ctx.arc(0,0,$r.r_size/2,0,2 * Math.PI, 2);
+        $r.ctx.lineWidth =$r.r_thickness;
+        $r.ctx.stroke();
+       
+        // second circle
+        $r.ctx.strokeStyle = "rgba(253, 128, 1, 0.9)";
+        $r.ctx.beginPath();
+        $r.ctx.arc(0,0,$r.r_size/2,0,endAngle, 1);
+        $r.ctx.lineWidth =$r.r_thickness;
+        $r.ctx.stroke();
+        
+        // label
+        $r.ctx.fillStyle = "#ffffff";
+       
+        $r.ctx.font = '12px Helvetica';
+        $r.ctx.fillText(label, 0, 23);
+        $r.ctx.fillText(label, 0, 23);   
+        
+        $r.ctx.font = 'bold 40px Helvetica';
+        $r.ctx.fillText(Math.floor(value), 0, 10);
+        
+        $r.ctx.restore();
+      }
+    }
+    
+    ringer.init();
+  </script>
+
+  <!-- 禁止右鍵 -->
+  <script type="text/javascript">
+    function iEsc(){ return false; }
+    function iRec(){ return true; }
+    function DisableKeys() {
+      if(event.ctrlKey || event.shiftKey || event.altKey) {
+        window.event.returnValue=false;
+        iEsc();
+      }
+    }
+    document.ondragstart=iEsc;
+    document.onkeydown=DisableKeys;
+    document.oncontextmenu=iEsc;
+    if (typeof document.onselectstart !="undefined")
+      document.onselectstart=iEsc;
+    else{
+      document.onmousedown=iEsc;
+      document.onmouseup=iRec;
+    }
+    function DisableRightClick(qsyzDOTnet){
+      if (window.Event){
+        if (qsyzDOTnet.which == 2 || qsyzDOTnet.which == 3)
+          iEsc();
+      }else{
+        if (event.button == 2 || event.button == 3){
+          event.cancelBubble = true
+          event.returnValue = false;
+          iEsc();
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>兌換所</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+
+  <!-- 自訂字型: Noto Sans TC -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand" href="https://www.plurk.com/Day_after99" target="_blank">
+      <span class="d-block d-lg-none">在那之後的九十九天</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid mx-auto mb-2" src="img/profile.png">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: center;">
+      <ul class="navbar-nav">
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="home.html">佈告欄</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="about.html">導覽手冊</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="diagram.html">人偶設計圖</a>
+        </li>
+        <li class="nav-item  container1 topBotomBordersIn">
+          <a class="nav-link" href="characters.html">死者之國</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="history.html">死之日誌</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="#">兌換所</a>
+        </li>
+        <li class="nav-item container1 topBotomBordersIn">
+          <a class="nav-link" href="contact.html">聯絡官方</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex">
+      <div class="col-lg-9 homefix">
+        <ul class="tabs">
+          <li class="active">兌換所列表</li>
+        </ul>
+
+        <ul class="tab__content">
+          <li class="active">
+            <div class="content__wrapper">
+              <div style="padding-left: 50px; padding-right: 50px;">
+                <h4>暫不開放</h4>
+              </div>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="col-lg-3 homefloat">
+
+        <div class="container-picture box box2">
+          <div class="bubble">你...晚點再過來吧，這裡還沒有適合你的東西。</div>
+          <div class="pointer"></div>
+          <img src="img/Automaton.png" style="width:100%; height:100%;">
+        </div>
+
+        <div class="box box1"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
+  <!-- 分頁 -->
+  <script>
+    $(document).ready(function(){
+    
+    // Variables
+    var clickedTab = $(".tabs > .active");
+    var tabWrapper = $(".tab__content");
+    var activeTab = tabWrapper.find(".active");
+    var activeTabHeight = activeTab.outerHeight();
+    
+    // Show tab on page load
+    activeTab.show();
+    
+    // Set height of wrapper on page load
+    tabWrapper.height(activeTabHeight);
+    
+    $(".tabs > li").on("click", function() {
+      
+      // Remove class from active tab
+      $(".tabs > li").removeClass("active");
+      
+      // Add class active to clicked tab
+      $(this).addClass("active");
+      
+      // Update clickedTab variable
+      clickedTab = $(".tabs .active");
+      
+      // fade out active tab
+      activeTab.fadeOut(250, function() {
+        
+        // Remove active class all tabs
+        $(".tab__content > li").removeClass("active");
+        
+        // Get index of clicked tab
+        var clickedTabIndex = clickedTab.index();
+
+        // Add class active to corresponding tab
+        $(".tab__content > li").eq(clickedTabIndex).addClass("active");
+        
+        // update new active tab
+        activeTab = $(".tab__content > .active");
+        
+        // Update variable
+        activeTabHeight = activeTab.outerHeight();
+        
+        // Animate height of wrapper to new tab height
+        tabWrapper.stop().delay(50).animate({
+          height: activeTabHeight
+        }, 500, function() {
+          
+          // Fade in active tab
+          activeTab.delay(50).fadeIn(250);
+          
+        });
+      });
+    });
+  });
+  </script>
+
+  <!-- 禁止右鍵 -->
+  <script type="text/javascript">
+    function iEsc(){ return false; }
+    function iRec(){ return true; }
+    function DisableKeys() {
+      if(event.ctrlKey || event.shiftKey || event.altKey) {
+        window.event.returnValue=false;
+        iEsc();
+      }
+    }
+    document.ondragstart=iEsc;
+    document.onkeydown=DisableKeys;
+    document.oncontextmenu=iEsc;
+    if (typeof document.onselectstart !="undefined")
+      document.onselectstart=iEsc;
+    else{
+      document.onmousedown=iEsc;
+      document.onmouseup=iRec;
+    }
+    function DisableRightClick(qsyzDOTnet){
+      if (window.Event){
+        if (qsyzDOTnet.which == 2 || qsyzDOTnet.which == 3)
+          iEsc();
+      }else{
+        if (event.button == 2 || event.button == 3){
+          event.cancelBubble = true
+          event.returnValue = false;
+          iEsc();
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
